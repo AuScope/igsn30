@@ -191,22 +191,19 @@ public class WebFormIGSNMintCtrl {
 				MintEventLog mintEventLog= new MintEventLog(r.getResourceIdentifier().getValue());
 				
 				if(IGSNUtil.resourceStartsWithAllowedPrefix(registrant.getPrefixes(),r)){		
-					if(r.getLogDate().getEventType().equals(EventType.REGISTERED)||r.getLogDate().getEventType().equals(EventType.UPDATED)){
-						try{
-							SimpleDateFormat metadataDateFormat = IGSNDateUtil.getISODateFormatter();
-							String igsn=this.mintService.createRegistryXML(r.getResourceIdentifier().getValue(), r.getLandingPage(), metadataDateFormat.format(new Date()), test, r.getLogDate().getEventType().value());							
-							mintEventLog.setMintLog(MintErrorCode.MINT_SUCCESS, null);
-							mintEventLog.setHandle("http://hdl.handle.net/"+igsn);							
-						}catch(Exception e){
-							mintEventLog.setMintLog(MintErrorCode.MINT_FAILURE, e.getMessage());							
-							mintEventLog.setDatabaseLog(DatabaseErrorCode.NOT_ATTEMPTED, "");
-							mintEventLogs.add(mintEventLog);
-							continue;
-						}
-					}else{
+					
+					try{
+						SimpleDateFormat metadataDateFormat = IGSNDateUtil.getISODateFormatter();
+						String igsn=this.mintService.createRegistryXML(r.getResourceIdentifier().getValue(), r.getLandingPage(), metadataDateFormat.format(new Date()), test, r.getLogDate().getEventType().value());							
 						mintEventLog.setMintLog(MintErrorCode.MINT_SUCCESS, null);
-						mintEventLog.setHandle("http://hdl.handle.net/"+IGSN_PREFIX+r.getResourceIdentifier().getValue());						
+						mintEventLog.setHandle("http://hdl.handle.net/"+igsn);							
+					}catch(Exception e){
+						mintEventLog.setMintLog(MintErrorCode.MINT_FAILURE, e.getMessage());							
+						mintEventLog.setDatabaseLog(DatabaseErrorCode.NOT_ATTEMPTED, "");
+						mintEventLogs.add(mintEventLog);
+						continue;
 					}
+					
 					
 					try{
 						if(test){

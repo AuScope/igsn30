@@ -30,7 +30,7 @@ public class EntityToSchemaConverterIGSN implements JAXBConverterInterface{
 	ObjectFactory objectFactory;
 	final String METAPREFIX="igsn";
 	final String NAMESPACE_FOR_BINDING="http://schema.igsn.org/description/1.0";
-	final String SCHEMA_LOCATION_FOR_BINDING="https://raw.githubusercontent.com/IGSN/metadata/dev/description/resource.xsd";
+	final String SCHEMA_LOCATION_FOR_BINDING="https://raw.githubusercontent.com/IGSN/metadata/r1/description/resource.xsd";
 	final Class XML_ROOT_CLASS = org.csiro.igsn.jaxb.oai.bindings.igsn.Resource.class;
 	
 	@Value("#{configProperties['REGISTRANT_AFFILIATION_NAME']}")

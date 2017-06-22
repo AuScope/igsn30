@@ -62,7 +62,7 @@ public class MultiHttpSecurityConfig {
 			
 			auth.ldapAuthentication()
 			.userDetailsContextMapper(new UserDetailsContextMapperImpl())
-			.userSearchBase("ou=People").userSearchFilter("(&(sAMAccountName={0}))") 
+			.userSearchFilter("(&(sAMAccountName={0}))") 
 	        .groupRoleAttribute("cn").groupSearchBase("ou=Groups").groupSearchFilter("(&(member={0}))")
 	        .contextSource(getLdapContextSource()); 
 			

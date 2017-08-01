@@ -1,3 +1,8 @@
+To cite this work:
+Anusuriya Devaraju, Jens Klump, Simon Cox, Victor Tey, Ryan Fraser (2017), [Towards a Web-Enabled Geo-Sample Web: An Open Source Resource Registration and Management System for Connecting Geo-Samples to the Web](igsn30/doc/elsarticle-template.pdf), Proceedings of the International Conference for Free and Open Source Software for Geospatial (FOSS4G 2017), OSGeo Journal, vol. 17, 2017. (in press)
+[Related Slides](igsn30/doc/FOSS4G2017.pdf)
+
+
 # IGSN
 IGSN 
 

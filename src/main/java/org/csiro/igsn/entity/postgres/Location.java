@@ -105,8 +105,7 @@ public class Location implements java.io.Serializable {
 		this.geometryUri = geometryUri;
 	}
 
-	@Column(name = "geometry")
-	@Type(type="org.hibernate.spatial.GeometryType")
+	@Column(name = "geometry", columnDefinition = "geometry")
 	@JsonIgnore
 	public Geometry getGeometry() {
 		return this.geometry;

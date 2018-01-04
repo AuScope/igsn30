@@ -184,7 +184,7 @@
 		<repository>
             <id>cgsrv8.arrc.csiro.au</id>
             <name>AuScope Nexus - PortalRepo</name>
-            <url>http://cgsrv8.arrc.csiro.au/nexus/content/groups/PortalRepository/</url>
+            <url>https://cgsrv8.arrc.csiro.au/nexus/#browse/browse/components</url>
             <snapshots>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
@@ -276,22 +276,18 @@
         <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.10.Final</version>
+			<version>5.2.12.Final</version>
 		</dependency>
-		<dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.3.10.FINAL</version>
-        </dependency>		
+				
 		<dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-spatial</artifactId>
-            <version>4.3</version>
+            <version>5.2.12.Final</version>
         </dependency>
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-c3p0</artifactId>
-		    <version>4.3.10.Final</version>
+		    <version>5.2.12.Final</version>
 		</dependency>			
 		<dependency>
 			<groupId>org.postgresql</groupId>

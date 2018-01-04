@@ -15,11 +15,9 @@ import org.csiro.igsn.entity.postgres.MaterialTypes;
 import org.csiro.igsn.entity.postgres.RelatedResources;
 import org.csiro.igsn.entity.postgres.ResourceTypes;
 import org.csiro.igsn.entity.postgres.Resources;
-import org.csiro.igsn.entity.postgres.SampledFeatures;
 import org.csiro.igsn.jaxb.oai.bindings.JAXBConverterInterface;
 import org.csiro.igsn.jaxb.oai.bindings.igsn.Resource.Collectors.Collector;
 import org.csiro.igsn.utilities.IGSNDateUtil;
-import org.postgis.Geometry;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

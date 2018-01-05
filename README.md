@@ -11,6 +11,7 @@ Pre-requisite
 Java 8
 tomcat 8
 Maven 3.X
+a license from https://bootstrapbay.com/theme/ztheme-mulipurpose-responsive-template-B8068D9 as we have repurpose this template of our use.
 
 Open the portal as a project in Eclipse
 Select File->Import
